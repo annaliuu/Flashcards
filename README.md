@@ -7,7 +7,7 @@ Implemented flashcard feature that shows the answer once the user taps the quest
 
 ### App Walk-through
 
-<img src="https://recordit.co/3umfp2dHrD.gif" width=200><br>
+<img src="https://recordit.co/JeENlZUoAJ.gif" width=200><br>
 
 ## Required
 - [x] Create New Project in Xcode
