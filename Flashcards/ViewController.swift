@@ -17,7 +17,6 @@ class ViewController: UIViewController {
    @IBOutlet weak var optionTwo: UIButton!
    @IBOutlet weak var optionThree: UIButton!
 
-
    override func viewDidLoad() {
       super.viewDidLoad()
 
@@ -45,12 +44,16 @@ class ViewController: UIViewController {
       optionTwo.layer.borderColor = #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1)
       optionThree.layer.borderWidth = 3.0;
       optionThree.layer.borderColor = #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1)
-
    }
 
    override func didReceiveMemoryWarning() {
       super.didReceiveMemoryWarning()
-      // Dispose of any resources that can be recreated.
+   }
+
+   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+      let navigationController = segue.destination as! UINavigationController
+      let creationController = navigationController.topViewController as! CreationViewController
+      creationController.flashcardsController = self
    }
 
    @IBAction func didTapOnFlashcard(_ sender: Any) {
@@ -60,6 +63,11 @@ class ViewController: UIViewController {
       else {
          question.isHidden = true;
       }
+   }
+
+   func updateFlashcard(question: String, answer: String) {
+      self.question.text = question;
+      self.answer.text = answer;
    }
 
    @IBAction func didTapOnOptionOne(_ sender: Any) {
