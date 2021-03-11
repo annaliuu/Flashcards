@@ -5,7 +5,7 @@
 ### App Description
 User can now create new flashcards and modify existing ones. User can also add multiple answer options.
 
-### App Walk-though
+### App Walk-through
 
 <img src="https://recordit.co/sO6heoUAzG.gif" width=200><br>
 <img src="https://recordit.co/KVESz58wFn.gif" width=200><br>
