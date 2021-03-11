@@ -12,17 +12,27 @@ class CreationViewController: UIViewController {
 
    @IBOutlet weak var questionTextField: UITextField!
    @IBOutlet weak var answerTextField: UITextField!
+   @IBOutlet weak var extraAnswerOne: UITextField!
+   @IBOutlet weak var extraAnswerTwo: UITextField!
+
+   var initialQuestion: String?
+   var initialAnswer: String?
+   var initialExtraAnswerOne: String?
+   var initialExtraAnswerTwo: String?
 
    var flashcardsController: ViewController!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+      questionTextField.text = initialQuestion
+      answerTextField.text = initialAnswer
+      extraAnswerOne.text = initialExtraAnswerOne
+      extraAnswerTwo.text = initialExtraAnswerTwo
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-
     }
 
    @IBAction func didTapOnCancel(_ sender: Any) {
@@ -32,11 +42,21 @@ class CreationViewController: UIViewController {
    @IBAction func didTapOnDone(_ sender: Any) {
       let questionText = questionTextField.text
       let answerText = answerTextField.text
+      let extraAnswerOneText = extraAnswerOne.text
+      let extraAnswerTwoText = extraAnswerTwo.text
 
-      
-      flashcardsController.updateFlashcard(question: questionText!, answer: answerText!)
+      if questionText == nil || answerText == nil || questionText!.isEmpty || answerText!.isEmpty {
+         let alert = UIAlertController(title: "Missing text", message: "You need to enter both a question and an answer", preferredStyle: .alert)
+         present(alert, animated: true)
+         let okAction = UIAlertAction(title: "Ok", style: .default)
+         alert.addAction(okAction)
+      }
+      else {
+         flashcardsController.updateFlashcard(question: questionText!, answer: answerText!, extraAnswerOne: extraAnswerOneText!, extraAnswerTwo: extraAnswerTwoText!)
+      }
+      //dismiss(animated: true)
    }
-
+   
 }
 
 

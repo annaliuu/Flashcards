@@ -54,7 +54,13 @@ class ViewController: UIViewController {
       let navigationController = segue.destination as! UINavigationController
       let creationController = navigationController.topViewController as! CreationViewController
       creationController.flashcardsController = self
+
+      if segue.identifier == "EditSegue" {
+         creationController.initialQuestion = question.text
+         creationController.initialAnswer = answer.text
+      }
    }
+   
 
    @IBAction func didTapOnFlashcard(_ sender: Any) {
       if question.isHidden {
@@ -65,9 +71,13 @@ class ViewController: UIViewController {
       }
    }
 
-   func updateFlashcard(question: String, answer: String) {
+   func updateFlashcard(question: String, answer: String, extraAnswerOne: String?, extraAnswerTwo: String?) {
       self.question.text = question;
       self.answer.text = answer;
+
+      optionOne.setTitle(extraAnswerOne, for: .normal)
+      optionTwo.setTitle(answer, for: .normal)
+      optionThree.setTitle(extraAnswerTwo, for: .normal)
    }
 
    @IBAction func didTapOnOptionOne(_ sender: Any) {
@@ -80,7 +90,6 @@ class ViewController: UIViewController {
    @IBAction func didTapOnOptionThree(_ sender: Any) {
       optionThree.isHidden = true;
    }
-
 
 }
 
