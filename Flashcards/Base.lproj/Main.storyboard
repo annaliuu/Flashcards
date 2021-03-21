@@ -46,6 +46,14 @@
                                             <segue destination="Cmw-rM-Zvk" kind="show" identifier="EditSegue" id="8NB-hg-f0A"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cV1-rm-ukD">
+                                        <rect key="frame" x="8" y="0.0" width="30" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="❌"/>
+                                        <connections>
+                                            <action selector="didTapOnDelete:" destination="BYZ-38-t0r" eventType="touchUpInside" id="COW-wY-cL6"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <gestureRecognizers/>
@@ -96,6 +104,24 @@
                                     <segue destination="Cmw-rM-Zvk" kind="presentation" id="3IV-hg-4g1"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7B0-EK-DwN">
+                                <rect key="frame" x="34" y="717" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Prev"/>
+                                <connections>
+                                    <action selector="didTapOnPrev:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CZP-NB-lT7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bEA-4t-q8F">
+                                <rect key="frame" x="295" y="717" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <action selector="didTapOnNext:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6ub-Y9-NuR"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -103,9 +129,11 @@
                     <connections>
                         <outlet property="answer" destination="0NM-iv-acA" id="6z6-JG-3iu"/>
                         <outlet property="card" destination="X2J-L0-8ge" id="b9b-aw-k8w"/>
+                        <outlet property="nextButton" destination="bEA-4t-q8F" id="9ux-cU-fUg"/>
                         <outlet property="optionOne" destination="y5d-j6-7ad" id="iCC-4P-dNm"/>
                         <outlet property="optionThree" destination="c51-Lr-tZE" id="K9H-Yi-Keo"/>
                         <outlet property="optionTwo" destination="JJP-dq-6mO" id="cZ3-3s-mNo"/>
+                        <outlet property="prevButton" destination="7B0-EK-DwN" id="tCW-hA-0fd"/>
                         <outlet property="question" destination="wWK-rL-rHE" id="BoZ-2O-Bow"/>
                     </connections>
                 </viewController>
@@ -116,7 +144,7 @@
                 </tapGestureRecognizer>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="164" y="123"/>
+            <point key="canvasLocation" x="164" y="122.66009852216749"/>
         </scene>
         <!--Creation View Controller-->
         <scene sceneID="88f-XH-HsR">
@@ -201,6 +229,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="8NB-hg-f0A"/>
+        <segue reference="3IV-hg-4g1"/>
     </inferredMetricsTieBreakers>
 </document>
