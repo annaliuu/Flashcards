@@ -1,5 +1,25 @@
 ## Flashcards
 
+
+## Lab 3
+
+### App Description
+User can access previously created flashcards and answer choices even after exiting and relaunching the app, can toggle between flashcards by using the "next" and "prev" buttons, and can delete and edit flashcards.
+
+### App Walk-though
+
+<img src="https://recordit.co/oAHAcT92i2.gif" width=200><br>
+
+## Required
+- [x] User can browse through multiple flashcards
+- [x] User can re-open the app and see previously created flashcards
+- [x] Push code to GitHub
+## Optional
+- [x] User can delete a flashcard
+- [x] User can edit existing flashcard
+- [x] User can store multiple choice questions
+
+
 ## Lab 2
 
 ### App Description
@@ -24,7 +44,7 @@ User can now create new flashcards and modify existing ones. User can also add m
 ## Lab 1
 
 ### App Description
-Implemented flashcard feature that shows the answer once the user taps the question. Also  styled the flashcard and answer choices by adding shadows and rounding corners.
+Implemented flashcard feature that shows the answer once user taps on the question. Also styled the flashcard and answer choices by adding shadows and rounding corners.
 
 ### App Walk-through
 
